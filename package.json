@@ -1,0 +1,31 @@
+{
+  "name": "project-starter",
+  "version": "1.0.0",
+  "description": "CLI Tool to quickstart projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewchng/project-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewchng/project-starter/issues"
+  },
+  "homepage": "https://github.com/andrewchng/project-starter#readme",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "dev": "ts-node-dev src/index.ts"
+  },
+  "dependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "ts-node-dev": "^2.0.0"
+  }
+}
