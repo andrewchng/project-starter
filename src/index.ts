@@ -1,7 +1,15 @@
-import inquirer from "inquirer"
+import inquirer from "inquirer";
+import fs from "fs-extra";
+
+interface Answers {
+    createTypescript: boolean;
+    projectName?: string;
+    installDeps?: boolean;
+    devTools?: string[];
+}
 
 async function initProject() {
-    const answers = inquirer.prompt([
+    const answers: Answers = await inquirer.prompt([
         {
             type: 'confirm',
             name: 'createTypescript',
@@ -18,7 +26,13 @@ async function initProject() {
         }]
     );
 
+    const projectDir = `./${answers.projectName}`;
+    console.log(`Creating typescript project: ${projectDir}`);
+    fs.ensureDirSync(projectDir);
+
 }
+
 initProject().catch((error) => {
-    console.log(error)
-})
+    console.log("Error", error)
+    process.exit();
+});
