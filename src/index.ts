@@ -1,7 +1,6 @@
 import inquirer from "inquirer"
 
 async function initProject() {
-    console.log("Init Project")
     const answers = inquirer.prompt([
         {
             type: 'confirm',
