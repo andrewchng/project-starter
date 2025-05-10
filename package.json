@@ -19,8 +19,9 @@
     "dev": "ts-node-dev src/index.ts"
   },
   "dependencies": {
-    "typescript": "^5.0.0",
-    "ts-node": "^10.9.0"
+    "inquirer": "^12.6.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
